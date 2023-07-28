@@ -1,0 +1,22 @@
+.converter {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    max-width: 20rem;
+    padding: 0.5rem 1rem;
+    background-color: rgb(247, 247, 247);
+
+    input, select {
+        padding: 0.5rem;
+    }
+
+    .result {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        input {
+            flex-basis: 100%;
+        }
+    }
+}
