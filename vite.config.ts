@@ -6,5 +6,6 @@ export default defineConfig({
   server: {
     open: true,
     port: 3000
-  }
+  },
+  base: '/my_home_test'
 })

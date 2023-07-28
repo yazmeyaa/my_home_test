@@ -49,11 +49,13 @@ export const ExchangeRateConverter = () => {
     }
 
     function handleBaseChange(event: ChangeEvent<HTMLSelectElement>) {
+        localStorage.setItem('selected_base', event.target.value)
         setBase(event.target.value)
         setCoefficient(apiData!.rates[event.target.value])
     }
 
     useEffect(() => {
+        setBase(localStorage.getItem('selected_base') ?? 'USD')
         loadDataFromAPI()
     }, [])
     
