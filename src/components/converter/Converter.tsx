@@ -28,7 +28,7 @@ export const ExchangeRateConverter = () => {
 
     function loadDataFromAPI() {
         setIsLoading(true)
-        fetch(URL)
+        fetch(URL, {cache: 'no-cache'})
         .then(data => data.json())
         .then(data => {
             setApiData(data)
